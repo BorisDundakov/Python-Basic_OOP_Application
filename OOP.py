@@ -1,5 +1,4 @@
 class UniversityStudent:
-
     n_students = 0
 
     def __init__(self, first_name, last_name, age, fac_number, specialty, nationality, year, qualification):
@@ -15,12 +14,10 @@ class UniversityStudent:
 
         UniversityStudent.n_students += 1
 
-
     def start_year(self):
         # in my university, the first 2 numbers of the faculty number are the last 2 digitis of the enrollment year of
         # the student
         return '20{}{}'.format(self.fac_number[0], self.fac_number[1])
-
 
     def predicted_graduation(self):
         if self.qualification == 'Bachelor':
@@ -34,9 +31,8 @@ class UniversityStudent:
             return final_result
 
 
-
 student_1 = UniversityStudent('Boris', 'Dundakov', 22, '18114052', 'Business Informatics', 'Bulgarian', 3, 'Bachelor')
-student_2 = UniversityStudent('Anton', 'Nedyalkov', 28, '111111', 'Journalism', 'Bulgarian', 1, 'Bachelor')
+student_2 = UniversityStudent('Anton', 'Nedyalkov', 28, '20111111', 'Journalism', 'Bulgarian', 1, 'Bachelor')
 
 print(student_1.__dict__)
 print(student_1.year)
